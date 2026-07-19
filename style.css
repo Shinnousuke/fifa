@@ -1,0 +1,228 @@
+/* Google Font */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    overflow:hidden;
+    background:#000;
+}
+
+/* Background Image */
+.hero{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background:url("fifa.jpg") center center/cover no-repeat;
+    transform:scale(1.03);
+    animation:zoom 15s infinite alternate;
+    z-index:-3;
+}
+
+@keyframes zoom{
+    from{
+        transform:scale(1.03);
+    }
+    to{
+        transform:scale(1.08);
+    }
+}
+
+/* Dark Overlay */
+
+.overlay{
+    position:fixed;
+    width:100%;
+    height:100vh;
+    background:rgba(0,0,0,.45);
+    z-index:-2;
+}
+
+/* Clickable Team Areas */
+
+.team{
+    position:absolute;
+    top:0;
+    width:50%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    transition:.5s;
+}
+
+.left{
+    left:0;
+}
+
+.right{
+    right:0;
+}
+
+/* Hover Effects */
+
+.left:hover{
+    background:rgba(255,0,0,.18);
+    box-shadow:inset 0 0 180px rgba(255,0,0,.55);
+}
+
+.right:hover{
+    background:rgba(0,170,255,.18);
+    box-shadow:inset 0 0 180px rgba(0,170,255,.55);
+}
+
+.left:hover .team-content{
+    transform:scale(1.08);
+}
+
+.right:hover .team-content{
+    transform:scale(1.08);
+}
+
+.team-content{
+    text-align:center;
+    color:white;
+    transition:.4s;
+    user-select:none;
+}
+
+.team-content h1{
+    font-size:85px;
+}
+
+.team-content h2{
+    font-size:46px;
+    font-weight:800;
+    letter-spacing:3px;
+}
+
+.team-content p{
+    margin-top:10px;
+    font-size:20px;
+    opacity:.9;
+}
+
+/* Center Text */
+
+.center{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    color:white;
+    pointer-events:none;
+}
+
+.title{
+    font-size:65px;
+    font-weight:800;
+    letter-spacing:3px;
+    text-shadow:0 0 20px black;
+}
+
+.subtitle{
+    margin-top:10px;
+    font-size:22px;
+}
+
+.vs{
+    margin:35px auto;
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    background:white;
+    color:black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:40px;
+    font-weight:bold;
+    box-shadow:0 0 40px rgba(255,255,255,.4);
+}
+
+#status{
+    margin-top:20px;
+    font-size:24px;
+    font-weight:600;
+    color:#ffe600;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.team-content h1{
+    font-size:55px;
+}
+
+.team-content h2{
+    font-size:28px;
+}
+
+.team-content p{
+    font-size:16px;
+}
+
+.title{
+    font-size:42px;
+}
+
+.subtitle{
+    font-size:18px;
+}
+
+.vs{
+    width:80px;
+    height:80px;
+    font-size:28px;
+}
+
+#status{
+    font-size:18px;
+}
+
+}
+
+@media(max-width:650px){
+
+.team{
+    width:100%;
+    height:50vh;
+}
+
+.left{
+    top:0;
+}
+
+.right{
+    top:50%;
+}
+
+.center{
+    top:50%;
+}
+
+.title{
+    font-size:32px;
+}
+
+.subtitle{
+    font-size:15px;
+}
+
+.team-content h1{
+    font-size:45px;
+}
+
+.team-content h2{
+    font-size:22px;
+}
+
+}

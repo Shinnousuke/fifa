@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FIFA Prediction</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="overlay"></div>
+
+<!-- Background Image -->
+<div class="hero"></div>
+
+<!-- Left Click Area -->
+<div class="team left" onclick="vote('Spain')">
+
+<div class="team-content">
+
+<h1>🇪🇸</h1>
+
+<h2>SPAIN</h2>
+
+<p>Click to Support</p>
+
+</div>
+
+</div>
+
+<!-- Right Click Area -->
+
+<div class="team right" onclick="vote('Argentina')">
+
+<div class="team-content">
+
+<h1>🇦🇷</h1>
+
+<h2>ARGENTINA</h2>
+
+<p>Click to Support</p>
+
+</div>
+
+</div>
+
+<!-- Center -->
+
+<div class="center">
+
+    <h1 class="title">
+        FIFA FINAL
+    </h1>
+
+    <p class="subtitle">
+        Who are you supporting tonight?
+    </p>
+
+    <div class="vs">
+        VS
+    </div>
+
+    <div id="status">
+        Choose your team
+    </div>
+
+    <br>
+
+
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="./supabase.js"></script>
+<script src="./script.js"></script>
+
+</body>
+</html>
