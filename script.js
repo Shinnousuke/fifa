@@ -63,12 +63,22 @@ async function vote(team) {
     const status = document.getElementById("status");
 
     status.innerHTML = `
-        <div class="success-message">
-            ✅ <strong>Your prediction has been submitted!</strong><br><br>
-            🏆 We'll let you know who wins after the final.<br>
-            ❤️ Let's hope <b>${team}</b> wins!
-        </div>
-    `;
+<div class="success-message">
+    <div style="font-size:50px;">⚽</div>
+
+    <h2>Prediction Submitted!</h2>
+
+    <p>
+        You're supporting <b>${team}</b>.
+        <br><br>
+
+        🏆 We'll let you know who wins after the final.
+        <br>
+
+        ❤️ Let's hope <b>${team}</b> wins!
+    </p>
+</div>
+`;
 
     await enableNotifications();
 }
