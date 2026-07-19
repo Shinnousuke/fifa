@@ -207,7 +207,8 @@ html,body{
     justify-content:center;
     align-items:center;
 
-    padding:20px;
+    padding:14px;
+    min-height:150px;
 
 }
 
@@ -215,18 +216,14 @@ html,body{
 /* Spain card */
 
 .left{
-
-    top:25vh;
-
+    top:32vh;
 }
 
 
 /* Argentina card */
 
 .right{
-
-    top:62vh;
-
+    top:67vh;
 }
 
 
@@ -269,19 +266,16 @@ html,body{
 /* Center */
 
 .center{
-
-    top:12vh;
-
+    top:4vh;
     width:90%;
-
 }
 
 
 
 .title{
-
-    font-size:28px;
-
+    font-size:40px;
+    font-weight:800;
+    letter-spacing:2px;
 }
 
 
@@ -314,11 +308,9 @@ html,body{
 /* Status */
 
 #status{
-
-    font-size:14px;
-
-    margin-top:8px;
-
+    font-size:15px;
+    margin-top:4px;
+    line-height:1.4;
 }
 
 }
