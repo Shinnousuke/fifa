@@ -169,152 +169,85 @@ html,body{
 
 /* MOBILE CLEAN DESIGN */
 
-@media(max-width:650px){
+@media (max-width:650px){
 
 html,body{
     overflow:hidden;
 }
 
-
-/* Background */
-
-.hero{
-    background-position:center;
-}
-
-
-/* Team layout */
-
-.team{
-
-    position:absolute;
-    width:85%;
-    height:auto;
-    left:50%;
-
-    transform:translateX(-50%);
-
-    border-radius:25px;
-
-    background:rgba(255,255,255,0.08);
-
-    backdrop-filter:blur(10px);
-
-    border:1px solid rgba(255,255,255,0.2);
-
-    display:flex;
-
-    justify-content:center;
-    align-items:center;
-
-    padding:14px;
-    min-height:150px;
-
-}
-
-
-/* Spain card */
-
-.left{
-    top:32vh;
-}
-
-
-/* Argentina card */
-
-.right{
-    top:67vh;
-}
-
-
-
-/* Team content */
-
-.team-content{
-
-    padding:5px;
-
-}
-
-
-.team-content h1{
-
-    font-size:45px;
-
-}
-
-
-.team-content h2{
-
-    font-size:24px;
-
-    letter-spacing:1px;
-
-}
-
-
-.team-content p{
-
-    font-size:13px;
-
-    margin-top:5px;
-
-}
-
-
-
-/* Center */
-
+/* Center section */
 .center{
-    top:4vh;
+    position:absolute;
+    top:30px;
+    left:50%;
+    transform:translateX(-50%);
     width:90%;
+    text-align:center;
 }
-
-
 
 .title{
-    font-size:40px;
-    font-weight:800;
-    letter-spacing:2px;
+    font-size:34px;
 }
-
 
 .subtitle{
-
-    font-size:14px;
-
-    margin-top:5px;
-
+    font-size:15px;
+    margin-top:6px;
 }
-
-
-
-/* VS */
 
 .vs{
-
-    width:55px;
-
-    height:55px;
-
+    width:65px;
+    height:65px;
     margin:12px auto;
-
-    font-size:22px;
-
+    font-size:24px;
 }
-
-
-
-/* Status */
 
 #status{
+    margin-top:8px;
     font-size:15px;
-    margin-top:4px;
-    line-height:1.4;
 }
 
+/* Cards */
+
+.team{
+    position:absolute;
+    width:88%;
+    left:50%;
+    transform:translateX(-50%);
+
+    height:150px;
+
+    border-radius:22px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,.15);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
+/* Fixed pixel positions instead of vh */
+
+.left{
+    top:280px;
+}
+
+.right{
+    top:455px;
+}
+
+.team-content h1{
+    font-size:42px;
+}
+
+.team-content h2{
+    font-size:24px;
+}
+
+.team-content p{
+    font-size:14px;
+}
+}
 
 /* Very small phones */
 
