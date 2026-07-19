@@ -167,88 +167,112 @@ html,body{
 
 
 
-/* MOBILE CLEAN DESIGN */
+/* ================= MOBILE ================= */
 
 @media (max-width:650px){
 
-html,body{
+html,
+body{
     overflow:hidden;
 }
 
-/* Center section */
+/* Hide VS circle */
+.vs{
+    display:none;
+}
+
+/* Center text */
+
 .center{
     position:absolute;
-    top:30px;
+    top:40px;
     left:50%;
     transform:translateX(-50%);
     width:90%;
     text-align:center;
 }
 
-.title{
-    font-size:34px;
-}
-
 .subtitle{
-    font-size:15px;
-    margin-top:6px;
-}
-
-.vs{
-    width:65px;
-    height:65px;
-    margin:12px auto;
-    font-size:24px;
+    font-size:28px;
+    font-weight:700;
+    line-height:1.3;
 }
 
 #status{
-    margin-top:8px;
-    font-size:15px;
+    display:none;
 }
 
 /* Cards */
 
 .team{
     position:absolute;
-    width:88%;
     left:50%;
     transform:translateX(-50%);
 
-    height:150px;
-
-    border-radius:22px;
-    background:rgba(255,255,255,.08);
-    backdrop-filter:blur(10px);
-    border:1px solid rgba(255,255,255,.15);
+    width:88%;
+    height:180px;
 
     display:flex;
     justify-content:center;
     align-items:center;
+
+    border-radius:28px;
+
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,.15);
+
+    transition:.3s;
 }
 
-/* Fixed pixel positions instead of vh */
+/* Spain */
 
 .left{
-    top:280px;
+    top:160px;
+    background:rgba(120,20,20,.22);
+    box-shadow:0 0 25px rgba(255,70,70,.18);
 }
 
+/* Argentina */
+
 .right{
-    top:455px;
+    top:370px;
+    background:rgba(0,80,120,.25);
+    box-shadow:0 0 25px rgba(80,180,255,.18);
+}
+
+.team-content{
+    text-align:center;
+    color:#fff;
 }
 
 .team-content h1{
-    font-size:42px;
+    font-size:52px;
+    margin-bottom:8px;
 }
 
 .team-content h2{
-    font-size:24px;
+    font-size:34px;
+    font-weight:800;
+    letter-spacing:2px;
+    margin-bottom:8px;
 }
 
 .team-content p{
-    font-size:14px;
-}
+    font-size:18px;
+    color:#d9d9d9;
 }
 
+/* Hover */
+
+.left:hover{
+    transform:translateX(-50%) scale(1.03);
+}
+
+.right:hover{
+    transform:translateX(-50%) scale(1.03);
+}
+
+}
 /* Very small phones */
 
 @media(max-width:380px){
