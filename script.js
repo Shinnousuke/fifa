@@ -60,12 +60,14 @@ async function vote(team) {
 
     localStorage.setItem("team", team);
 
+    const status = document.getElementById("status");
+
     status.innerHTML = `
-    🔒 Prediction Locked!
-
-    <br><br>
-
-    We'll notify you after the match result.
+        <div class="success-message">
+            ✅ <strong>Your prediction has been submitted!</strong><br><br>
+            🏆 We'll let you know who wins after the final.<br>
+            ❤️ Let's hope <b>${team}</b> wins!
+        </div>
     `;
 
     await enableNotifications();
