@@ -5,13 +5,18 @@
     font-family:'Poppins',sans-serif;
 }
 
-html,body{
+html,
+body{
     width:100%;
-    min-height:100%;
-    overflow:hidden;
+    min-height:100vh;
     background:#000;
+    overflow-x:hidden;
 }
-
+.container{
+    position:relative;
+    width:100%;
+    height:100vh;
+}
 
 /* Background */
 
@@ -153,33 +158,8 @@ html,body{
     color:#ffe600;
 }
 
-.success-message{
-    width:100%;
-    max-width:420px;
-    margin:20px auto;
-    padding:24px;
 
-    background:rgba(255,255,255,.08);
-    border:1px solid rgba(255,255,255,.15);
-    border-radius:22px;
 
-    backdrop-filter:blur(12px);
-
-    color:white;
-    text-align:center;
-}
-
-.success-message h2{
-    margin:12px 0;
-    color:#FFD54F;
-    font-size:26px;
-}
-
-.success-message p{
-    color:#f2f2f2;
-    font-size:17px;
-    line-height:1.7;
-}
 /* TABLET */
 
 @media(max-width:900px){
@@ -192,125 +172,116 @@ html,body{
 
 
 
-/* ================= MOBILE ================= */
+/* MOBILE */
 
 @media (max-width:650px){
 
 html,
 body{
-    overflow:hidden;
+    overflow-y:auto;
 }
 
-/* Hide VS circle */
-.vs{
-    display:none;
+/* Teams become normal blocks */
+
+.team{
+    position:relative;
+    width:100%;
+    height:40vh;
 }
 
-/* Center text */
+.left{
+    left:auto;
+    top:auto;
+}
+
+.right{
+    right:auto;
+    top:auto;
+}
+
+/* Center is no longer absolute */
 
 .center{
-    position:absolute;
-    top:40px;
-    left:50%;
-    transform:translateX(-50%);
-    width:90%;
+    position:relative;
+    top:auto;
+    left:auto;
+    transform:none;
+
+    width:100%;
+    padding:30px 20px;
+    margin:0 auto;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
     text-align:center;
+}
+
+.title{
+    font-size:32px;
 }
 
 .subtitle{
-    font-size:28px;
-    font-weight:700;
-    line-height:1.3;
+    font-size:16px;
+    margin-top:10px;
 }
 
-
-
-/* Cards */
-
-.team{
-    position:absolute;
-    left:50%;
-    transform:translateX(-50%);
-
-    width:88%;
-    height:180px;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    border-radius:28px;
-
-    backdrop-filter:blur(10px);
-    border:1px solid rgba(255,255,255,.15);
-
-    transition:.3s;
-}
-
-/* Spain */
-
-.left{
-    top:160px;
-    background:rgba(120,20,20,.22);
-    box-shadow:0 0 25px rgba(255,70,70,.18);
-}
-
-/* Argentina */
-
-.right{
-    top:370px;
-    background:rgba(0,80,120,.25);
-    box-shadow:0 0 25px rgba(80,180,255,.18);
+.vs{
+    width:80px;
+    height:80px;
+    margin:20px auto;
+    font-size:30px;
 }
 
 .team-content{
-    text-align:center;
-    color:#fff;
+    padding:20px;
 }
 
 .team-content h1{
-    font-size:52px;
-    margin-bottom:8px;
+    font-size:42px;
 }
 
 .team-content h2{
-    font-size:34px;
-    font-weight:800;
-    letter-spacing:2px;
-    margin-bottom:8px;
+    font-size:22px;
 }
 
 .team-content p{
+    font-size:15px;
+}
+
+#status{
     font-size:18px;
-    color:#d9d9d9;
-}
-
-/* Hover */
-
-.left:hover{
-    transform:translateX(-50%) scale(1.03);
-}
-
-.right:hover{
-    transform:translateX(-50%) scale(1.03);
+    line-height:1.5;
+    margin-top:20px;
 }
 
 }
-/* Very small phones */
-
-@media(max-width:380px){
-
-.team-content h1{
-    font-size:36px;
-}
-
-
-.team-content h2{
-    font-size:19px;
-}
-
+@media (max-width:380px){
 
 .title{
+    font-size:28px;
+}
+
+.subtitle{
+    font-size:14px;
+}
+
+.team-content h1{
+    font-size:34px;
+}
+
+.team-content h2{
+    font-size:18px;
+}
+
+.team-content p{
+    font-size:13px;
+}
+
+.vs{
+    width:70px;
+    height:70px;
     font-size:26px;
 }
 
