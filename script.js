@@ -65,12 +65,6 @@ async function vote(team) {
 
     <br><br>
 
-    You are supporting
-
-    <b>${team}</b>
-
-    <br><br>
-
     We'll notify you after the match result.
     `;
 
