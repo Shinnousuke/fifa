@@ -12,13 +12,39 @@ const status = document.getElementById("status");
 // -------------------------
 const savedTeam = localStorage.getItem("team");
 
-if(savedTeam){
+if (savedTeam) {
+
+    document.querySelector(".left").style.display = "none";
+    document.querySelector(".right").style.display = "none";
+
+    const subtitle = document.querySelector(".subtitle");
+    if (subtitle) subtitle.style.display = "none";
+
+    const vs = document.querySelector(".vs");
+    if (vs) vs.style.display = "none";
+
+    const center = document.querySelector(".center");
+    center.style.top = "50%";
+    center.style.left = "50%";
+    center.style.transform = "translate(-50%, -50%)";
 
     status.innerHTML = `
-    ✅ You're supporting <b>${savedTeam}</b>
-    <br><small>(Click again to change your prediction)</small>
-    `;
+    <div class="success-message">
+        <div style="font-size:60px;">⚽</div>
 
+        <h2>Prediction Submitted!</h2>
+
+        <p>
+            Thank you for voting for <b>${savedTeam}</b>.
+            <br><br>
+
+            🏆 We'll notify you once the final is over.
+            <br><br>
+
+            ❤️ Let's hope <b>${savedTeam}</b> wins!
+        </p>
+    </div>
+    `;
 }
 
 // -------------------------
