@@ -167,7 +167,7 @@ html,body{
 
 
 
-/* MOBILE */
+/* MOBILE CLEAN DESIGN */
 
 @media(max-width:650px){
 
@@ -176,68 +176,149 @@ html,body{
 }
 
 
-/* Split top-bottom */
+/* Background */
+
+.hero{
+    background-position:center;
+}
+
+
+/* Team layout */
 
 .team{
-    width:100%;
-    height:38vh;
+
+    position:absolute;
+    width:85%;
+    height:auto;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,0.08);
+
+    backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,0.2);
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+
 }
 
+
+/* Spain card */
 
 .left{
-    top:0;
+
+    top:25vh;
+
 }
 
+
+/* Argentina card */
 
 .right{
+
     top:62vh;
+
 }
 
 
-/* Center moves slightly */
 
-.center{
-    top:50%;
-    width:95%;
-}
+/* Team content */
 
+.team-content{
 
-.title{
-    font-size:30px;
-}
+    padding:5px;
 
-
-.subtitle{
-    font-size:14px;
-}
-
-
-.vs{
-    margin:15px auto;
-    width:75px;
-    height:75px;
-    font-size:28px;
 }
 
 
 .team-content h1{
-    font-size:42px;
+
+    font-size:45px;
+
 }
 
 
 .team-content h2{
-    font-size:22px;
+
+    font-size:24px;
+
+    letter-spacing:1px;
+
 }
 
 
 .team-content p{
-    font-size:14px;
+
+    font-size:13px;
+
+    margin-top:5px;
+
 }
 
 
+
+/* Center */
+
+.center{
+
+    top:12vh;
+
+    width:90%;
+
+}
+
+
+
+.title{
+
+    font-size:28px;
+
+}
+
+
+.subtitle{
+
+    font-size:14px;
+
+    margin-top:5px;
+
+}
+
+
+
+/* VS */
+
+.vs{
+
+    width:55px;
+
+    height:55px;
+
+    margin:12px auto;
+
+    font-size:22px;
+
+}
+
+
+
+/* Status */
+
 #status{
-    font-size:16px;
-    line-height:1.4;
+
+    font-size:14px;
+
+    margin-top:8px;
+
 }
 
 }
