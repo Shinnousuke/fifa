@@ -63,24 +63,42 @@ async function vote(team) {
     const status = document.getElementById("status");
 
     status.innerHTML = `
-    <div class="success-message">
-        <div style="font-size:50px;">⚽</div>
-    
-        <h2>Prediction Submitted!</h2>
-    
-        <p>
-            You're supporting <b>${team}</b>.
-            <br><br>
-    
-            🏆 We'll let you know who wins after the final.
-            <br>
-    
-            ❤️ Let's hope <b>${team}</b> wins!
-        </p>
-    </div>
-    `;
+<div class="success-message">
+    <div style="font-size:60px;">⚽</div>
 
-    await enableNotifications();
+    <h2>Prediction Submitted!</h2>
+
+    <p>
+        Thank you for voting for <b>${team}</b>.
+        <br><br>
+
+        🏆 We'll notify you once the final is over.
+        <br><br>
+
+        ❤️ Let's hope <b>${team}</b> wins!
+    </p>
+</div>
+`;
+
+// Hide voting cards
+document.querySelector(".left").style.display = "none";
+document.querySelector(".right").style.display = "none";
+
+// Hide the question
+const subtitle = document.querySelector(".subtitle");
+if (subtitle) subtitle.style.display = "none";
+
+// Hide the VS circle if it exists
+const vs = document.querySelector(".vs");
+if (vs) vs.style.display = "none";
+
+// Center the success message
+const center = document.querySelector(".center");
+center.style.top = "50%";
+center.style.left = "50%";
+center.style.transform = "translate(-50%, -50%)";
+
+await enableNotifications();
 }
 
 // -------------------------
