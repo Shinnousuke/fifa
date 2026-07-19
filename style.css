@@ -1,4 +1,3 @@
-/* Google Font */
 *{
     margin:0;
     padding:0;
@@ -6,109 +5,107 @@
     font-family:'Poppins',sans-serif;
 }
 
-body{
+html,body{
+    width:100%;
+    min-height:100%;
     overflow:hidden;
     background:#000;
 }
 
-/* Background Image */
+
+/* Background */
+
 .hero{
     position:fixed;
-    top:0;
-    left:0;
+    inset:0;
     width:100%;
-    height:100vh;
-    background:url("fifa.jpg") center center/cover no-repeat;
-    transform:scale(1.03);
+    height:100dvh;
+    background:url("fifa.jpg") center/cover no-repeat;
     animation:zoom 15s infinite alternate;
     z-index:-3;
 }
 
 @keyframes zoom{
     from{
-        transform:scale(1.03);
+        transform:scale(1);
     }
     to{
         transform:scale(1.08);
     }
 }
 
-/* Dark Overlay */
 
 .overlay{
     position:fixed;
-    width:100%;
-    height:100vh;
-    background:rgba(0,0,0,.45);
+    inset:0;
+    height:100dvh;
+    background:rgba(0,0,0,.55);
     z-index:-2;
 }
 
-/* Clickable Team Areas */
+
+/* Teams */
 
 .team{
     position:absolute;
-    top:0;
     width:50%;
-    height:100vh;
+    height:100dvh;
     display:flex;
     justify-content:center;
     align-items:center;
     cursor:pointer;
-    transition:.5s;
+    transition:.4s;
 }
+
 
 .left{
     left:0;
 }
 
+
 .right{
     right:0;
 }
 
-/* Hover Effects */
 
 .left:hover{
     background:rgba(255,0,0,.18);
-    box-shadow:inset 0 0 180px rgba(255,0,0,.55);
 }
+
 
 .right:hover{
     background:rgba(0,170,255,.18);
-    box-shadow:inset 0 0 180px rgba(0,170,255,.55);
 }
 
-.left:hover .team-content{
-    transform:scale(1.08);
-}
-
-.right:hover .team-content{
-    transform:scale(1.08);
-}
 
 .team-content{
     text-align:center;
     color:white;
-    transition:.4s;
+    transition:.3s;
     user-select:none;
+    padding:20px;
 }
+
 
 .team-content h1{
-    font-size:85px;
+    font-size:clamp(40px,6vw,85px);
 }
 
+
 .team-content h2{
-    font-size:46px;
+    font-size:clamp(22px,3vw,46px);
     font-weight:800;
-    letter-spacing:3px;
+    letter-spacing:2px;
 }
+
 
 .team-content p{
     margin-top:10px;
-    font-size:20px;
-    opacity:.9;
+    font-size:clamp(14px,2vw,20px);
 }
 
-/* Center Text */
+
+/* Center */
 
 .center{
     position:absolute;
@@ -117,112 +114,151 @@ body{
     transform:translate(-50%,-50%);
     text-align:center;
     color:white;
-    pointer-events:none;
+    width:90%;
 }
 
+
 .title{
-    font-size:65px;
+    font-size:clamp(30px,5vw,65px);
     font-weight:800;
-    letter-spacing:3px;
-    text-shadow:0 0 20px black;
+    letter-spacing:2px;
 }
+
 
 .subtitle{
     margin-top:10px;
-    font-size:22px;
+    font-size:clamp(14px,2vw,22px);
 }
 
+
 .vs{
-    margin:35px auto;
-    width:120px;
-    height:120px;
+    margin:25px auto;
+    width:clamp(65px,10vw,120px);
+    height:clamp(65px,10vw,120px);
     border-radius:50%;
     background:white;
     color:black;
     display:flex;
     justify-content:center;
     align-items:center;
-    font-size:40px;
+    font-size:clamp(25px,4vw,40px);
     font-weight:bold;
-    box-shadow:0 0 40px rgba(255,255,255,.4);
 }
 
+
 #status{
-    margin-top:20px;
-    font-size:24px;
+    margin-top:15px;
+    font-size:clamp(16px,2vw,24px);
     font-weight:600;
     color:#ffe600;
 }
 
-/* Responsive */
+
+
+/* TABLET */
 
 @media(max-width:900px){
 
 .team-content h1{
-    font-size:55px;
-}
-
-.team-content h2{
-    font-size:28px;
-}
-
-.team-content p{
-    font-size:16px;
-}
-
-.title{
-    font-size:42px;
-}
-
-.subtitle{
-    font-size:18px;
-}
-
-.vs{
-    width:80px;
-    height:80px;
-    font-size:28px;
-}
-
-#status{
-    font-size:18px;
+    font-size:50px;
 }
 
 }
+
+
+
+/* MOBILE */
 
 @media(max-width:650px){
 
+html,body{
+    overflow:hidden;
+}
+
+
+/* Split top-bottom */
+
 .team{
     width:100%;
-    height:50vh;
+    height:38vh;
 }
+
 
 .left{
     top:0;
 }
 
+
 .right{
-    top:50%;
+    top:62vh;
 }
+
+
+/* Center moves slightly */
 
 .center{
     top:50%;
+    width:95%;
 }
+
 
 .title{
-    font-size:32px;
+    font-size:30px;
 }
+
 
 .subtitle{
-    font-size:15px;
+    font-size:14px;
 }
 
-.team-content h1{
-    font-size:45px;
+
+.vs{
+    margin:15px auto;
+    width:75px;
+    height:75px;
+    font-size:28px;
 }
+
+
+.team-content h1{
+    font-size:42px;
+}
+
 
 .team-content h2{
     font-size:22px;
+}
+
+
+.team-content p{
+    font-size:14px;
+}
+
+
+#status{
+    font-size:16px;
+    line-height:1.4;
+}
+
+}
+
+
+/* Very small phones */
+
+@media(max-width:380px){
+
+.team-content h1{
+    font-size:36px;
+}
+
+
+.team-content h2{
+    font-size:19px;
+}
+
+
+.title{
+    font-size:26px;
 }
 
 }
