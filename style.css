@@ -153,7 +153,19 @@ html,body{
     color:#ffe600;
 }
 
-
+.success-message{
+    margin-top:20px;
+    padding:18px;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:18px;
+    color:#FFD54F;
+    font-size:17px;
+    font-weight:600;
+    line-height:1.6;
+    text-align:center;
+    backdrop-filter:blur(10px);
+}
 
 /* TABLET */
 
